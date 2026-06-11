@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>YouTube Recovery Tool — UI</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>YouTube Recovery Tool</h1>
+    <p class="subtitle">Recover videos, channels, and playlists — paste a URL or drop a recovery JSON file.</p>
+  </header>
+
+  <main>
+    <section class="controls">
+      <label>
+        YouTube URL
+        <input id="youtubeUrl" type="text" placeholder="https://www.youtube.com/watch?v=..." />
+      </label>
+      <div class="row">
+        <button id="recoverBtn">Recover from URL</button>
+        <input id="fileInput" type="file" accept=".json" />
+        <div class="spacer"></div>
+        <button id="exportVisibleBtn" disabled>Export Visible</button>
+        <button id="exportAllBtn" disabled>Export All</button>
+      </div>
+      <div class="row" style="margin-top:8px;">
+        <div class="filters">
+          <button class="filter active" data-filter="all">All</button>
+          <button class="filter" data-filter="video">Videos</button>
+          <button class="filter" data-filter="channel">Channels</button>
+          <button class="filter" data-filter="playlist">Playlists</button>
+        </div>
+        <div class="spacer"></div>
+        <p id="status" class="status"></p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Results</h2>
+      <div id="results" class="results">No results yet.</div>
+    </section>
+  </main>
+
+  <footer>
+    <small>Static UI. Point the fetch endpoint in <code>app.js</code> to your backend (default: <code>/api/recover</code>).</small>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
