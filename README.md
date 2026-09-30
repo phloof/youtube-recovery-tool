@@ -1,5 +1,11 @@
 # youtube-recovery-tool
 
+> [!WARNING]
+> **Project Discontinued**
+> 
+> This project is no longer actively maintained. The repository is kept available for archival purposes, but issues, pull requests, and support requests will not be monitored or answered. Feel free to fork the repository if you wish to continue development.
+>
+> 
 This Python script helps you save videos from lost YouTube channels using a two-phase approach, can be used in conjunction with yt mass uploader in seperate repository (remember to add link bozo) to upload video title, content, thumbnail and a descirption containing original upload date, like, dislikes:
 
 **Phase 1:** Scrapes ALL video information from [Filmot.com](https://filmot.com) channel pages  
